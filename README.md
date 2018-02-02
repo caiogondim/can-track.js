@@ -8,6 +8,12 @@
 
 Polyfill for [doNotTrack](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/doNotTrack).
 
+## Installation
+
+```bash
+npm install --save can-track
+```
+
 ## Usage
 
 `canTrack` returns `false` if the user opted-out for tracking; `true` otherwise.
