@@ -1,6 +1,6 @@
-<h1 align="center">can-track</h1>
+# can-track
 
-<div align="center">
+<div>
  <a href="https://www.npmjs.com/package/can-track"><img src="https://img.shields.io/npm/v/can-track.svg" /></a>
 </div>
 
