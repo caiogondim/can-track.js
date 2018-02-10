@@ -44,3 +44,12 @@ test('compatibility with Safari', () => {
   }
   expect(canTrack(win)).toBe(false)
 })
+
+test('compatibility with Firefox Gecko < 32', () => {
+  const win = {
+    navigator: {
+      doNotTrack: 'yes'
+    }
+  }
+  expect(canTrack(win)).toBe(false)
+})
