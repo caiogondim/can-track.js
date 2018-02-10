@@ -11,6 +11,15 @@ test('return true if doNotTrack equals "1"', () => {
   expect(canTrack(win)).toBe(false)
 })
 
+test('return true if doNotTrack equals "yes"', () => {
+  const win = {
+    navigator: {
+      doNotTrack: 'yes'
+    }
+  }
+  expect(canTrack(win)).toBe(false)
+})
+
 test('return true if doNotTrack equals "0"', () => {
   const win = {
     navigator: {
