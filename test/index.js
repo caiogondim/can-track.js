@@ -11,15 +11,6 @@ test('return true if doNotTrack equals "1"', () => {
   expect(canTrack(win)).toBe(false)
 })
 
-test('return true if doNotTrack equals "yes"', () => {
-  const win = {
-    navigator: {
-      doNotTrack: 'yes'
-    }
-  }
-  expect(canTrack(win)).toBe(false)
-})
-
 test('return true if doNotTrack equals "0"', () => {
   const win = {
     navigator: {
@@ -50,6 +41,15 @@ test('compatibility with IE/Edge', () => {
 test('compatibility with Safari', () => {
   const win = {
     doNotTrack: "1"
+  }
+  expect(canTrack(win)).toBe(false)
+})
+
+test('compatibility with Firefox Gecko < 32', () => {
+  const win = {
+    navigator: {
+      doNotTrack: 'yes'
+    }
   }
   expect(canTrack(win)).toBe(false)
 })
